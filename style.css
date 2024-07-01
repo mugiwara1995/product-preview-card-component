@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root{
+   ---DarkCyan: hsl(158, 36%, 37%);
+   ---Cream: hsl(30, 38%, 92%);
+   ---VeryDarkBlue: hsl(212, 21%, 14%);
+   ---DarkGrayishBlue: hsl(228, 12%, 48%);
+   ---White: hsl(0, 0%, 100%);
+
+   ---fontMontserrat: 'Montserrat';
+   ---fontFraunces: 'Fraunces'
+
+}
+
+
+body{
+   background-color: var(---Cream);
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-family: var(---fontMontserrat);
+}
+
+.desktop-img{
+   display: none;
+}
+
+.mobile-img{
+   width: 100%;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+.card{
+   max-width: 350px;
+   background-color: var(---White);
+   display: flex;
+   flex-direction: column;
+   border-radius: 10px;
+}
+
+.card-content{
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding: 20px;
+}
+
+.card-content .title{
+   text-transform: uppercase;
+   color: var(---DarkGrayishBlue);
+   font-family: var(---fontMontserrat);
+   font-size: 0.6rem;
+   letter-spacing: 5px;
+}
+
+.title-name{
+   font-family: var(---fontFraunces);
+   font-weight: 700;
+}
+
+
+.card-content p{
+   color: var(---DarkGrayishBlue);
+   line-height: 1.3rem;
+   font-size: 14px;
+   font-weight: 500;
+}
+
+.price-info{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+.price-info .price{
+   color: var(---DarkCyan);
+   font-family: var(---fontFraunces);
+   font-weight: 700;
+}
+
+.price-info s{
+   color: var(---DarkGrayishBlue);
+}
+
+.addCart-btn{
+   color: var(---White);
+   background-color: var(---DarkCyan);
+   border: none;
+   padding: 10px;
+   margin: 0 10px;
+   border-radius: 8px;
+   font-weight: 600;
+   font-family: var(---fontMontserrat);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8px;
+   font-size: 12px;
+   cursor: pointer;
+}
+
+.addCart-btn:hover{
+   background-color:  hsl(158, 42%, 19%);
+}
+
+
+
+
+
+
+@media (min-width:768px) {
+
+   .card{
+      flex-direction: row;
+      max-width: 500px;
+  
+   }
+
+   .mobile-img{
+      display: none;
+   }
+
+   .desktop-img{
+      display: block;
+      width: 250px;
+      height: 100%;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+   }
+}
+
+
